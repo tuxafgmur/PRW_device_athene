@@ -163,14 +163,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_EXFAT_DRIVER := sdfat
 
 # Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-    endif
-  endif
-endif
+WITH_DEXPREOPT := true
+DONT_DEXPREOPT_PREBUILTS := false
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
