@@ -125,7 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	mm.enable.smoothstreaming=true \
 	mm.enable.sec.smoothstreaming=true \
-	media.stagefright.log-uri=1 \
+	media.stagefright.log-uri=0 \
 	media.stagefright.use-awesome=false \
 	media.stagefright.enable-player=true \
 	media.stagefright.enable-http=true \
@@ -156,6 +156,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.iop.enable_prefetch_ofr=1 \
 	vendor.perf.iop_v3.enable=1 \
 	persist.vendor.qti.games.gt.prof=1 \
+	persist.vendor.perfservice.disable=true \
 	ro.vendor.gt_library=libqti-gt.so \
 	ro.vendor.at_library=libqti-at.so \
 	ro.vendor.extension_library=libqti-perfd-client.so \
@@ -211,9 +212,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.ims.vt.epdg=false \
 	persist.ims.rcs=false \
 	persist.ims.disableADBLogs=2 \
-	persist.ims.disableDebugLogs=0 \
+	persist.ims.disableDebugLogs=1 \
 	persist.ims.disableQXDMLogs=1 \
-	persist.ims.disableIMSLogs=0 \
+	persist.ims.disableIMSLogs=1 \
 	persist.vendor.radio.sw_mbn_update=0 \
 	persist.vendor.radio.custom_ecc=1 \
 	persist.vendor.radio.is_wps_enabled=true \
@@ -263,7 +264,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.data.mode=concurrent \
 	persist.data.iwlan.enable=true
 
-#Trim properties
+# Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.qti.sys.fw.use_trim_settings=true \
 	ro.vendor.qti.sys.fw.empty_app_percent=50 \
