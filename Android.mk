@@ -172,6 +172,18 @@ $(FIRMWARE_WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_WIDEVINE_SYMLINKS)
 
+FIRMWARE_VENUS_IMAGES := \
+    venus.b00 venus.b01 venus.b02 venus.b03 venus.b04 venus.mbn venus.mdt
+
+FIRMWARE_VENUS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/etc/firmware/,$(notdir $(FIRMWARE_VENUS_IMAGES)))
+$(FIRMWARE_VENUS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Venus Firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/vendor/firmware/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_VENUS_SYMLINKS)
+
 PARTITIONS_TO_LINK := dsp fsg
 
 VENDOR_SUBPARTS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/, $(notdir $(PARTITIONS_TO_LINK)))
