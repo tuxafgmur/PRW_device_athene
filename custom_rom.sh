@@ -21,3 +21,6 @@ LastSortLine=`wc -l $WSYSTEMDIR/vendor/build.prop | cut -d ' ' -f1`
 head -n $FirstSortLine $WSYSTEMDIR/vendor/build.prop > $WSYSTEMDIR/vendor/build.new
 head -n $((LastSortLine)) $WSYSTEMDIR/vendor/build.prop | tail -n +$((FirstSortLine + 1)) | tr '\n[' '[\n' | sort | tr '\n[' '[\n' | grep -v '^\[$' | sort >> $WSYSTEMDIR/vendor/build.new
 rm $WSYSTEMDIR/vendor/build.prop && mv $WSYSTEMDIR/vendor/build.new $WSYSTEMDIR/vendor/build.prop
+
+rm $WSYSTEMDIR/vendor/bin/toolbox
+ln -sf /system/bin/toolbox $WSYSTEMDIR/vendor/bin/toolbox
