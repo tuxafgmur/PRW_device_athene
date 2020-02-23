@@ -1,1 +1,4 @@
-allow netmgrd self:capability dac_override;
+allow netmgrd init:unix_stream_socket { connectto };
+allow netmgrd netd_socket:sock_file write;
+allow netmgrd property_socket:sock_file write;
+allow netmgrd toolbox_exec:file { execute getattr execute_no_trans read open };

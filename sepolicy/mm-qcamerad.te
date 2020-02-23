@@ -1,3 +1,10 @@
+binder_call(mm-qcamerad, servicemanager)
+binder_call(mm-qcamerad, system_server)
+
+allow servicemanager mm-qcamerad:dir search;
+allow servicemanager mm-qcamerad:file { open read };
+allow servicemanager mm-qcamerad:process getattr;
+
 allow mm-qcamerad debug_prop:property_service set;
 allow mm-qcamerad device:chr_file ioctl;
 allow mm-qcamerad init:unix_stream_socket connectto;
@@ -11,10 +18,4 @@ allow mm-qcamerad sysfs:file write;
 allow mm-qcamerad system_data_file:dir { read w_dir_perms };
 allow mm-qcamerad system_data_file:file open;
 allow mm-qcamerad system_server:unix_stream_socket { read write };
-
-allow servicemanager mm-qcamerad:dir search;
-allow servicemanager mm-qcamerad:file { open read };
-allow servicemanager mm-qcamerad:process getattr;
-
-binder_call(mm-qcamerad, servicemanager)
-binder_call(mm-qcamerad, system_server)
+allow mm-qcamerad sensorservice_service:service_manager find;
