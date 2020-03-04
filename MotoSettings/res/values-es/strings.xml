@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Ajustes Moto</string>
+    <string name="category_thermal_title">Carga</string>
+    <string name="category_thermal_turbocharging_title">Carga rápida</string>
+    <string name="category_thermal_turbocharging_summary">Activar o desactivar la carga rápida para cargadores QC.</string>
+    <string name="category_display_title">Pantalla</string>
+    <string name="category_display_burnin_title">Atenuación de quemado</string>
+    <string name="category_display_burnin_summary">Activar o desactivar la atenuación de efecto quemado en paneles afectados.</string>
+</resources>
