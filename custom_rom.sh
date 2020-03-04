@@ -6,6 +6,12 @@
 
 WSYSTEMDIR=$1
 
+rm -rf $WSYSTEMDIR/etc/init/atrace.rc
+rm -rf $WSYSTEMDIR/etc/init/atrace_userdebug.rc
+rm -rf $WSYSTEMDIR/etc/init/bootstat-debug.rc
+rm -rf $WSYSTEMDIR/etc/init/tombstoned.rc
+rm -rf $WSYSTEMDIR/etc/init/wifi-events.rc
+
 sed '/ro.expect.recovery_id/d'          -i $WSYSTEMDIR/build.prop
 sed '/dalvik.vm.stack-trace/d'          -i $WSYSTEMDIR/build.prop
 
