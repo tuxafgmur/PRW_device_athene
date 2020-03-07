@@ -61,13 +61,33 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-	camera.lowpower.record.enable=1 \
-	persist.vendor.camera.display.umax=1920x1080 \
-	persist.vendor.camera.display.lmax=1280x720 \
-	persist.camera.HAL3.enabled=0 \
-	persist.camera.gyro.disable=0 \
 	camera.hal1.packagelist=com.skype.raider \
-	media.camera.ts.monotonic=1
+	camera.lowpower.record.enable=1 \
+	persist.vendor.camera.display.lmax=1280x720 \
+	persist.vendor.camera.display.umax=1920x1080 \
+	media.camera.ts.monotonic=1 \
+	persist.camera.HAL3.enabled=0 \
+	persist.camera.c2d.debug.mask=0 \
+	persist.camera.cpp.debug.mask=0 \
+	persist.camera.global.debug=0 \
+	persist.camera.gyro.disable=0 \
+	persist.camera.hal.debug=0 \
+	persist.camera.iface.logs=0 \
+	persist.camera.imglib.logs=0 \
+	persist.camera.isp.debug=0 \
+	persist.camera.mct.debug=0 \
+	persist.camera.mmstill.logs=0 \
+	persist.camera.pproc.debug.mask=0 \
+	persist.camera.sensor.debug=0 \
+	persist.camera.stats.aec.debug=0 \
+	persist.camera.stats.af.debug=0 \
+	persist.camera.stats.afd.debug=0 \
+	persist.camera.stats.asd.debug=0 \
+	persist.camera.stats.awb.debug=0 \
+	persist.camera.stats.debug=0 \
+	persist.camera.stats.haf.debug=0 \
+	persist.camera.stats.is.debug=0 \
+	persist.camera.stats.q3a.debug=0
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
