@@ -58,7 +58,7 @@ BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
-TARGET_KERNEL_CONFIG := athene_defconfig
+TARGET_KERNEL_CONFIG := dhollmen_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8952
 
 # Audio
