@@ -6,9 +6,9 @@
 
 WSYSTEMDIR=$1
 
-rm -rf $WSYSTEMDIR/etc/init/atrace.rc
 rm -rf $WSYSTEMDIR/etc/init/atrace_userdebug.rc
 rm -rf $WSYSTEMDIR/etc/init/bootstat-debug.rc
+rm -rf $WSYSTEMDIR/etc/init/dumpstate.rc
 rm -rf $WSYSTEMDIR/etc/init/tombstoned.rc
 rm -rf $WSYSTEMDIR/etc/init/wifi-events.rc
 
