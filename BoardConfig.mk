@@ -200,6 +200,9 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# Init .rc files
+DEVICE_HAS_INITRC := true
+
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
