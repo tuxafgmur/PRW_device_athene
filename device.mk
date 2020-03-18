@@ -284,6 +284,7 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.rc \
+    init.usb.rc \
     ueventd.qcom.rc
 
 # Releasetools script
