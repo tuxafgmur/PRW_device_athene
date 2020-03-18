@@ -283,6 +283,7 @@ PRODUCT_PACKAGES += \
     init.oem.hw.sh \
     init.qcom.power.rc \
     init.qcom.rc \
+    init.rom.rc \
     init.rc \
     init.usb.rc \
     ueventd.rc \
